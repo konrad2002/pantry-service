@@ -14,6 +14,14 @@ Location{
 }
 ```
 
+*Example:*
+```json
+{
+    "id": 0,
+    "name": "string"
+}
+```
+
 
 ### Category
 Describes a category where the item can be sorted in, like fruits.
@@ -22,6 +30,14 @@ Describes a category where the item can be sorted in, like fruits.
 Category{
   id	integer($int64)
   name	string
+}
+```
+
+*Example:*
+```json
+{
+    "id": 0,
+    "name": "string"
 }
 ```
 
@@ -37,13 +53,32 @@ Item{
   quantity	string
   expiryDate	string($date-time)
   location	Location{
-    id	integer($int64)
+    id	  integer($int64)
     name	string
   }
   category	Category{
-    id	integer($int64)
+    id	  integer($int64)
     name	string
   }
+}
+```
+
+*Example:*
+```json
+{
+    "id": 0,
+    "description": "string",
+    "amount": 0,
+    "quantity": "string",
+    "expiryDate": "2022-03-11T21:11:20.363Z",
+    "location": {
+        "id": 0,
+        "name": "string"
+    },
+    "category": {
+        "id": 0,
+        "name": "string"
+    }
 }
 ```
 
