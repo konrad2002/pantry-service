@@ -1,5 +1,53 @@
 # pantry-service
-## Version: v1
+
+## Description
+This Spring project integrates database models and requests to realize a pantry documentation frontend. With the expiry date you can watch food that has to be eaten in the closer future. 
+
+## Models
+### Location
+Describes a place where the item is stored, like a fridge.
+
+```
+Location{
+  id	integer($int64)
+  name	string
+}
+```
+
+
+### Category
+Describes a category where the item can be sorted in, like fruits.
+
+```
+Category{
+  id	integer($int64)
+  name	string
+}
+```
+
+
+### Item
+This is the item you are going to work with.
+
+```
+Item{
+  id	integer($int64)
+  description	string
+  amount	integer($int32)
+  quantity	string
+  expiryDate	string($date-time)
+  location	Location{
+    id	integer($int64)
+    name	string
+  }
+  category	Category{
+    id	integer($int64)
+    name	string
+  }
+}
+```
+
+## Requests
 
 ### /api/v1/location/
 
