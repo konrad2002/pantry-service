@@ -37,6 +37,7 @@ public class CategoryService {
     }
 
     public List<Category> getCategoriesWithNameLike(String name) {
+        name = "%" + name + "%";
         return categoryRepository.findAllByNameLike(name);
     }
 
